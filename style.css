@@ -1,0 +1,83 @@
+.flexSection {
+    background-color: antiquewhite;
+}
+.box {
+    background-color: red;
+    width: 200px;
+    height: 200px;
+    border: 2px solid black;
+}
+.flex {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.mediaSection {
+    background-color: darkgray;
+}
+.mediaSection .flex {
+    flex-wrap: nowrap;
+}
+
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
+
+.widthSection .box {
+    width: 20%;
+}
+
+.images img {
+    /* max-width: 100%; */
+    width: 900px;
+    max-width: calc(100% - 20px);
+}
+
+@media (min-width: 950px) {
+    .images img {
+        width: 1000px;
+    }
+}
+
+@media (max-width: 950px) {
+    .mediaSection .flex {
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+    .box {
+        width: 150px;
+        height: 150px;
+    }
+    .col-3 {
+        width: 49%;
+    }
+    .widthSection .box {
+        width: 40%;
+    }
+}
+
+@media (max-width: 700px) {
+    .widthSection .box {
+        width: 100%;
+    }
+}
+
+@media (max-width: 200px) {
+    .widthSection .box {
+        width: 90%;
+        background-color: blue;
+    }
+    .widthSection .box:nth-child(1) {
+        display: none;
+    }
+}
